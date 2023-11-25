@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Magra&display=swap" rel="stylesheet"/>
-    <link href="styles.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
 <!-- Hotjar Tracking Code for CA-IXD -->
 <script>
   (function(h,o,t,j,a,r){
@@ -25,39 +25,38 @@
   })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
   </head>
-  
+  <header id="top">
+    <a href="index.html"><img src="/images/gamehub logo.png" class="logo" alt="Gamehub Logo"></a>
+    <h1 class="title">A UNIVERSE OF GAMES</h1>
+    <div class="searchcontainer"><input class="searchbar" type="text" placeholder="Search.."/></div>
+    <nav>
+       <a class="navlink" href="index.html" aria-label="Home">Home</a>
+       <a class="navlink" href="games.html" aria-label="Games">Games</a>
+       <a class="navlink" href="games.html" aria-label="Equipment">Equipment</a>
+       <a class="navlink" href="games.html" aria-label="Outlet">Outlet</a>
+      </nav>
+       <div class="icons">
+    <i id="user" class="fa-solid fa-user"></i>
+    <i id="heart" class="fa-solid fa-heart"></i>
+    <i id="cart" class="fa-solid fa-cart-shopping"></i>
+</div>
+</div>
+ </header>
+     
     <body>
-        <header>
-          <a href="index.html"><img src="/images/gamehub logo.png" class="logo" alt="Gamehub Logo"></a>
-          <nav>
-            <h1 class="title">A universe of games</h1>
-            <a href="index.html">Home</a>
-            <a href="games.html">Games</a>
-            <a href="games.html">Equipment</a>
-            <a href="games.html">Outlet</a>
-          </nav>
 
-          <div class="searchbarContainer">
-            <input class="searchbar" type="text" placeholder="Search.."/>
-          </div> 
-    
-          <div class="icon-container">
-            <i id="user" class="fa-solid fa-user"></i>
-            <i id="heart" class="fa-solid fa-heart"></i>
-            <i id="cart" class="fa-solid fa-cart-shopping"></i>
-          </div>
-        </header>
             <main>
-                <div class="hello">
-                    HELLO WORLD - THIS IS THE MAIN CONTENT
-                </div>
+              <div class="mainindex">
+                  <div class="ibuttoncontainer">
+                    <a class="index-button" href="games.html">See all games</a>  
+                  </div>
+              </div>
             </main>
-        
             <footer>
-                <a id="Aboutus" href="about.html">About</a>
-                <a id="Contact" href="contact.html">Contact</a>
-            </footer>
-            
+              <div class="footerlinks">
+              <a id="Aboutus" href="about.html">About</a>
+              <a id="Contact" href="contact.html">Contact</a></div>
+          </footer>
             <script defer src="Js/main.js" type="module"></script>
         </body>
 </html>
