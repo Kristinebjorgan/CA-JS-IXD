@@ -18,7 +18,7 @@ body {
 header {
     grid-row: 1 / 2;
     grid-column: 1 / 4;
-    height: 70%;
+    height: 100px;
     background: linear-gradient(#0f1224 20%, #1B203D 80%);
     text-align: center;
     letter-spacing: 5px;
@@ -38,8 +38,8 @@ header {
 }
 
 .logo {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: auto;
 }
 
 nav {
