@@ -1,7 +1,7 @@
 // In checkout.js
 import { fetchProduct } from './api.js';
 
-async function populateCheckout() {
+export async function populateCheckout() {
   const productId = /* retrieve product ID from local storage or URL */;
   const productData = await fetchProduct(productId);
 

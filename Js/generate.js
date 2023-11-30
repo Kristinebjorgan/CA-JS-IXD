@@ -38,16 +38,24 @@ export function generateProductContainers(data) {
     buttonContainer.classList.add("buttoncontainer");
 
     const buyNewLink = document.createElement("a");
-    buyNewLink.href = "cart.html";
-    buyNewLink.textContent = "BUY NEW";
-    buyNewLink.classList.add("button"); 
-    buttonContainer.appendChild(buyNewLink);
+        buyNewLink.href = "#";
+        buyNewLink.textContent = "BUY NEW";
+        buyNewLink.classList.add("button");
+        buyNewLink.addEventListener("click", (event) => {
+            event.preventDefault();
+            addToCart(product, 'new');
+        });
+        buttonContainer.appendChild(buyNewLink);
     
-    const buyUsedLink = document.createElement("a");
-    buyUsedLink.href = "cart.html";
-    buyUsedLink.textContent = "BUY USED";
-    buyUsedLink.classList.add("button"); 
-    buttonContainer.appendChild(buyUsedLink);
+        const buyUsedLink = document.createElement("a");
+        buyUsedLink.href = "#";
+        buyUsedLink.textContent = "BUY USED";
+        buyUsedLink.classList.add("button");
+        buyUsedLink.addEventListener("click", (event) => {
+            event.preventDefault();
+            addToCart(product, 'used');
+        });
+        buttonContainer.appendChild(buyUsedLink);
 
     productContainerDiv.appendChild(buttonContainer);
 
@@ -58,7 +66,7 @@ export function generateProductContainers(data) {
 }
 
 //ON CLICK TO GET TO PRODUCT
-function handleReadMoreClick(productId) {
+export function handleReadMoreClick(productId) {
   const loader = document.getElementById("loader");
   loader.style.display = "block";
 
@@ -76,4 +84,11 @@ function handleReadMoreClick(productId) {
     .finally(() => {
       loader.style.display = "none";
     });
+}
+
+//ADD TO CART
+export function addToCart(product, condition) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart.push({ product, condition });
+  localStorage.setItem('cart', JSON.stringify(cart));
 }
